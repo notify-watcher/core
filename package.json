@@ -9,7 +9,8 @@
   "private": false,
   "scripts": {
     "lint": "eslint .",
-    "lint:fix": "eslint --fix ."
+    "lint:fix": "eslint --fix .",
+    "publish": "npm publish --access public"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
