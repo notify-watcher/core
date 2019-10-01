@@ -6,5 +6,9 @@
   "repository": "https://github.com/notify-watcher/core.git",
   "author": "Nicolás Gebauer <negebauerm@gmail.com>",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "dependencies": {
+    "axios": "^0.19.0",
+    "cheerio": "^1.0.0-rc.3"
+  }
 }
