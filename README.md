@@ -1,4 +1,4 @@
-# Notify watcher  core
+# Notify watcher core
 
 Utilities for running Notify watcher watcher's
 
