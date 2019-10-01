@@ -1,5 +1,5 @@
-import executeWatcher from "./src/execute-watcher";
+const execute = require("./src/execute");
 
 module.exports = {
-  executeWatcher
+  execute
 };

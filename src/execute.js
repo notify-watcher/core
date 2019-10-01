@@ -1,12 +1,12 @@
-import axios from "axios";
-import cheerio from "cheerio";
+const axios = require("axios");
+const cheerio = require("cheerio");
 
 /**
  * Execute a watcher with the notify-watcher/core libs provided
- * @param watcher Watcher to be executed
+ * @param {Object} watcher Watcher to be executed
  * @param {Object} options Options to pass to the watcher
  */
-function executeWatcher({ watcher, ...options }) {
+function execute(watcher, options) {
   return watcher({
     ...options,
     libs: {
@@ -16,4 +16,4 @@ function executeWatcher({ watcher, ...options }) {
   });
 }
 
-module.exports = executeWatcher;
+module.exports = execute;
