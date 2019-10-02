@@ -1,6 +1,6 @@
 # Notify watcher core
 
-Utilities for running Notify watcher watcher's
+Utilities for running Notify watcher's watchers
 
 ## Usage
 
@@ -10,10 +10,10 @@ Run a watcher by using `execute`
 const { execute } = require('@notify-watcher/core');
 
 // Replace with your watcher
-const watcher = {}
+const watcher = {};
 
-// Provided required data to watcher
-const options = {}
+// Provide required data to watcher
+const options = {};
 
-const watcherExecution = execute(watcher, options)
+const watcherExecution = execute(watcher, options);
 ```
