@@ -1,6 +1,6 @@
 {
   "name": "@notify-watcher/core",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Core library for running watcher for notify watcher",
   "main": "index.js",
   "repository": "https://github.com/notify-watcher/core.git",
