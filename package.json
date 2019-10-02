@@ -2,7 +2,7 @@
   "name": "@notify-watcher/core",
   "version": "0.0.1",
   "description": "Core library for running watcher for notify watcher",
-  "main": "index.js",
+  "main": "src/index.js",
   "repository": "https://github.com/notify-watcher/core.git",
   "author": {
     "name": "Nicolás Gebauer",
