@@ -1,6 +1,6 @@
-const axios = require("axios");
-const cheerio = require("cheerio");
-const lodash = require("lodash");
+const axios = require('axios');
+const cheerio = require('cheerio');
+const lodash = require('lodash');
 
 /**
  * Execute a watcher with the notify-watcher/core libs provided
@@ -13,8 +13,8 @@ function execute(watcher, options) {
     libs: {
       axios,
       cheerio,
-      lodash
-    }
+      lodash,
+    },
   });
 }
 
