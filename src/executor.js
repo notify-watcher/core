@@ -16,7 +16,7 @@ class Executor {
    * Create a new watcher executor with provided libs
    * @param {Object} extraLibs Any extra libs to provide to watchers
    */
-  constructor(extraLibs) {
+  constructor(extraLibs = {}) {
     this.libs = {
       ...PRELOADED_LIBS,
       ...extraLibs,
