@@ -6,15 +6,11 @@
 // This also means that @notify-watcher/core should have a way to obtain the list
 // of libs that are being passed to watchers
 
-const fs = require('fs-extra');
-
-const serverLibs = fs.readdirSync('./node_modules');
-
-function validateLibs(libs, watcherName) {
+function validateLibs(executor, libs, watcherName) {
   const missingLibs = [];
   for (let i = 0; i < libs.length; i += 1) {
     const lib = libs[i];
-    if (!serverLibs.includes(lib)) missingLibs.push(lib);
+    if (!executor.hasLib(lib)) missingLibs.push(lib);
   }
   if (missingLibs.length > 0) {
     console.warn(`WARN: Missing libs ${libs} for watcher ${watcherName}`);
