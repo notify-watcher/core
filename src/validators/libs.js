@@ -10,14 +10,14 @@ const fs = require('fs-extra');
 
 const serverLibs = fs.readdirSync('./node_modules');
 
-function validateLibs({ config: { libs }, name }) {
+function validateLibs(libs, watcherName) {
   const missingLibs = [];
   for (let i = 0; i < libs.length; i += 1) {
     const lib = libs[i];
     if (!serverLibs.includes(lib)) missingLibs.push(lib);
   }
   if (missingLibs.length > 0) {
-    console.warn(`WARN: Missing libs ${libs} for watcher ${name}`);
+    console.warn(`WARN: Missing libs ${libs} for watcher ${watcherName}`);
     return false;
   }
   return true;

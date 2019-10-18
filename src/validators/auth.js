@@ -1,4 +1,4 @@
-function validateAuth({ config: { auth } }) {
+function validateAuth(auth) {
   if (!auth) return true;
   // TODO: Here we should check the auth object for a valid auth specification
   // this means, config.auth should contain all required fields for
