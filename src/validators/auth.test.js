@@ -1,0 +1,1 @@
+const validateAuth = require('./auth');
