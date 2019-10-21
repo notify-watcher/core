@@ -3,7 +3,7 @@ const { AUTH_TYPE_KEYS } = require('../constants');
 const originalValidateAuth = require('./auth');
 
 function validateAuth(auth) {
-  return originalValidateAuth(auth, 'testWatcherName', { verbose: false });
+  return originalValidateAuth(auth, 'testWatcherName');
 }
 
 describe('validateAuth', () => {

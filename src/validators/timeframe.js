@@ -2,7 +2,7 @@
 const { TIMEFRAMES_AND_REQUIRED_KEYS } = require('../constants');
 
 const defaultOptions = {
-  verbose: true,
+  verbose: false,
 };
 
 function validateTimeframe(timeframe, watcherName, options = {}) {

@@ -5,7 +5,7 @@ const requiredItemKeys = Object.keys(AUTH_KEYS);
 const validTypeKeys = Object.keys(AUTH_TYPE_KEYS);
 
 const defaultOptions = {
-  verbose: true,
+  verbose: false,
 };
 
 function validateAuth(auth, watcherName, options = {}) {

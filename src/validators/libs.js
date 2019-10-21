@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 
 const defaultOptions = {
-  verbose: true,
+  verbose: false,
 };
 
 /**
