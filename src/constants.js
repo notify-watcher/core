@@ -17,6 +17,11 @@ const TIMEFRAMES_AND_REQUIRED_KEYS = {
   [TIMEFRAMES.day]: ['hour'],
 };
 
+const AUTH_KEYS = keymirror({
+  type: null,
+  description: null,
+});
+
 const AUTH_TYPE_KEYS = keymirror({
   string: null,
   bool: null,
@@ -30,6 +35,7 @@ const AUTH_TYPES = {
 };
 
 module.exports = {
+  AUTH_KEYS,
   AUTH_TYPE_KEYS,
   AUTH_TYPES,
   ERRORS,
