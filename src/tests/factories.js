@@ -1,29 +1,26 @@
 const { Factory } = require('rosie');
 const keymirror = require('keymirror');
+const {
+  constants: { AUTH_TYPE_KEYS },
+} = require('../constants');
 
 const factoryNames = keymirror({
   authObject: null,
 });
 
-Factory.define(factoryNames.koaCtx).attrs({
-  assert: () =>
-    jest.fn((assertion, error) => {
-      if (assertion) return;
-      throw error;
-    }),
-  params: () => ({}),
-  query: () => ({}),
-  redirect: () => jest.fn(),
-  request: () => ({}),
-  set: () => jest.fn(),
-  state: () => ({}),
-  t: () => text => text,
-  throw: () =>
-    jest.fn(err => {
-      throw err;
-    }),
+Factory.define(factoryNames.authObject).attrs({
+  secretString: {
+    type: AUTH_TYPE_KEYS.string,
+    description: 'A secret string',
+  },
+  secretNumber: {
+    type: AUTH_TYPE_KEYS.number,
+    description: 'A secret number',
+  },
+  secretToggle: {
+    type: AUTH_TYPE_KEYS.bool,
+    description: 'A secret toggle',
+  },
 });
 
-Factory.factoryNames = factoryNames;
-
-module.exports = Factory;
+module.exports = { Factory, factoryNames };
