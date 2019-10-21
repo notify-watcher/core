@@ -37,12 +37,12 @@
     "keymirror": "^0.1.1"
   },
   "devDependencies": {
+    "eslint": "^6.5.1",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-prettier": "^6.3.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jest": "^22.19.0",
     "eslint-plugin-prettier": "^3.1.1",
-    "eslint": "^6.5.1",
     "jest": "^24.9.0",
     "prettier": "^1.18.2",
     "rosie": "^2.0.1",
