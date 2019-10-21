@@ -26,6 +26,9 @@
     "lint": "eslint .",
     "lint:fix": "eslint --fix ."
   },
+  "bin": {
+    "new-watcher": "src/cli/new-watcher.js"
+  },
   "dependencies": {
     "keymirror": "^0.1.1"
   },

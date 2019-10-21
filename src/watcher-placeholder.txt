@@ -1,0 +1,72 @@
+const {
+  constants: { ERRORS, TIMEFRAMES },
+} = require('@notify-watcher/core');
+
+// Your watcher configuration
+const config = {
+  name: '__WATCHER_NAME__',
+  displayName: '',
+  description: '',
+  auth: false,
+  libs: ['axios'],
+  timeframe: {
+    type: TIMEFRAMES.minute,
+  },
+  notificationTypes: {
+    aNotificationType: {
+      key: 'aNotificationType',
+      description: 'You have new notifications available.',
+    },
+  },
+};
+
+// [Optional] If your watcher requires auth this function
+// is called for checking the user provided credentials
+async function checkAuth({ auth, libs }) {
+  // Perform a request for checking if the auth credentials are valid
+  // Return true if they are, false if not
+}
+
+async function watch({ snapshot, auth, libs }) {
+  try {
+    // Fetch new data with the watcher and save it a newSnapshot
+    // Use auth if you need it
+    // Use libs if you need them (like axios, lodash, cheerio, puppeteer, etc)
+    const newSnapshot = {};
+
+    // Create an empty notifications array
+    const notifications = [];
+
+    // Compare the previous snapshot with the newSnapshot to create notifications
+    // Add those notifications to the notifications array in the following way:
+    notifications.push({
+      key: config.notificationTypes.aNotificationType.key,
+      message: 'You have a new notification',
+    });
+
+    // Return the new snapshot along with the notifications array
+    return {
+      snapshot: newSnapshot,
+      notifications,
+      error: undefined,
+    };
+  } catch (error) {
+    // If it's an auth error
+    error.key = ERRORS.auth;
+    // If it's another error
+    error.key = ERRORS.other;
+
+    // Return the error with the previous snapshot (dont overwrite it)
+    return {
+      snapshot,
+      notifications: [],
+      error,
+    };
+  }
+}
+
+module.exports = {
+  checkAuth,
+  config,
+  watch,
+};
