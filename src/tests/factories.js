@@ -4,21 +4,22 @@ const { AUTH_TYPE_KEYS } = require('../constants');
 
 const factoryNames = keymirror({
   authObject: null,
+  authItem: null,
+});
+
+Factory.define(factoryNames.authItem).attrs({
+  type: AUTH_TYPE_KEYS.string,
+  description: 'A secret',
 });
 
 Factory.define(factoryNames.authObject).attrs({
-  secretString: {
-    type: AUTH_TYPE_KEYS.string,
-    description: 'A secret string',
-  },
-  secretNumber: {
+  secretString: Factory.build(factoryNames.authItem),
+  secretNumber: Factory.build(factoryNames.authItem, {
     type: AUTH_TYPE_KEYS.number,
-    description: 'A secret number',
-  },
-  secretToggle: {
+  }),
+  secretToggle: Factory.build(factoryNames.authItem, {
     type: AUTH_TYPE_KEYS.bool,
-    description: 'A secret toggle',
-  },
+  }),
 });
 
 module.exports = { Factory, factoryNames };
