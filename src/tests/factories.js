@@ -1,8 +1,6 @@
 const { Factory } = require('rosie');
 const keymirror = require('keymirror');
-const {
-  constants: { AUTH_TYPE_KEYS },
-} = require('../constants');
+const { AUTH_TYPE_KEYS } = require('../constants');
 
 const factoryNames = keymirror({
   authObject: null,
