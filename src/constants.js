@@ -39,11 +39,17 @@ const CLIENT_KINDS = keymirror({
   email: null,
 });
 
+const CLIENT_KIND_REQUIRED_KEYS = keymirror({
+  [CLIENT_KINDS.telegram]: ['chatId'],
+  [CLIENT_KINDS.email]: ['email'],
+});
+
 module.exports = {
   AUTH_KEYS,
   AUTH_TYPE_KEYS,
   AUTH_TYPES,
   CLIENT_KINDS,
+  CLIENT_KIND_REQUIRED_KEYS,
   ERRORS,
   TIMEFRAMES_AND_REQUIRED_KEYS,
   TIMEFRAMES,
