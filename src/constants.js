@@ -39,16 +39,11 @@ const CLIENT_KINDS = keymirror({
   email: null,
 });
 
-const DEFAULT_CLIENT_IDS = keymirror({
-  email: null,
-});
-
 module.exports = {
   AUTH_KEYS,
   AUTH_TYPE_KEYS,
   AUTH_TYPES,
   CLIENT_KINDS,
-  DEFAULT_CLIENT_IDS,
   ERRORS,
   TIMEFRAMES_AND_REQUIRED_KEYS,
   TIMEFRAMES,
