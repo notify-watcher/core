@@ -2,14 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [0.3.2](https://github.com/notify-watcher/core/compare/v0.3.1...v0.3.2) (2019-10-24)
+## [0.3.2](https://github.com/notify-watcher/core/compare/v0.3.1...v0.3.2) (2019-10-24)
 
 
 ### Features
 
 * client kinds and required keys for each one ([#18](https://github.com/notify-watcher/core/issues/18)) ([743b79b](https://github.com/notify-watcher/core/commit/743b79b406afe3e7f2fbb34646bfdf800164841d))
 
-### [0.3.1](https://github.com/notify-watcher/core/compare/v0.3.0...v0.3.1) (2019-10-23)
+## [0.3.1](https://github.com/notify-watcher/core/compare/v0.3.0...v0.3.1) (2019-10-23)
 
 
 ### Features
