@@ -1,6 +1,6 @@
 {
   "name": "@notify-watcher/core",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "description": "Core library for running watcher for notify watcher",
   "main": "src/index.js",
   "repository": "https://github.com/notify-watcher/core.git",
@@ -28,7 +28,7 @@
   "scripts": {
     "lint:fix": "eslint --fix .",
     "lint": "eslint .",
-    "prerelease": "/scripts/prerelease.sh",
+    "prerelease": "scripts/prerelease.sh",
     "release": "standard-version",
     "postrelease": "git push --follow-tags && gh-release && npm publish",
     "test": "jest --watchAll",
