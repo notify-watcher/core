@@ -28,8 +28,9 @@
   "scripts": {
     "lint:fix": "eslint --fix .",
     "lint": "eslint .",
-    "postrelease": "git push --follow-tags && npm publish",
+    "prerelease": "/scripts/prerelease.sh",
     "release": "standard-version",
+    "postrelease": "git push --follow-tags && gh-release && npm publish",
     "test": "jest --watchAll",
     "test:ci": "jest"
   },
@@ -43,6 +44,7 @@
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jest": "^22.19.0",
     "eslint-plugin-prettier": "^3.1.1",
+    "gh-release": "^3.5.0",
     "jest": "^24.9.0",
     "prettier": "^1.18.2",
     "rosie": "^2.0.1",
