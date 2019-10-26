@@ -7,8 +7,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### ⚠ BREAKING CHANGES
 
-* remove client kinds and required keys (#21)
-
 * remove client kinds and required keys ([#21](https://github.com/notify-watcher/core/issues/21)) ([3499502](https://github.com/notify-watcher/core/commit/3499502f494b4e4c3b5772dcecbac1e3a9d3df88))
 
 ## [0.3.2](https://github.com/notify-watcher/core/compare/v0.3.1...v0.3.2) (2019-10-24)
