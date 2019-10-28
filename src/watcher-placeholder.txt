@@ -1,5 +1,5 @@
 const {
-  constants: { ERRORS, TIMEFRAMES },
+  constants: { TIMEFRAMES },
 } = require('@notify-watcher/core');
 
 // Your watcher configuration
@@ -48,20 +48,17 @@ async function watch({ snapshot, auth, libs }) {
     return {
       snapshot: newSnapshot,
       notifications,
-      error: undefined,
     };
   } catch (error) {
-    // If it's an auth error
-    error.key = ERRORS.auth;
-    // If it's another error
-    error.key = ERRORS.other;
-
-    // Return the error with the previous snapshot (dont overwrite it)
-    return {
+    // If it's an expected error (like a 304 Not Modified) return the
+    // last snapshot and empty notifications array
+    if (error.reponse.status === 304) return {
       snapshot,
-      notifications: [],
-      error,
-    };
+      notifications: []
+    }
+
+    // If it's an unexpected error throw it
+    throw error;
   }
 }
 
