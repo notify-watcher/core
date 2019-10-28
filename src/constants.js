@@ -1,10 +1,5 @@
 const keymirror = require('keymirror');
 
-const ERRORS = keymirror({
-  auth: null,
-  other: null,
-});
-
 const TIMEFRAMES = keymirror({
   minute: null,
   hour: null,
@@ -38,7 +33,6 @@ module.exports = {
   AUTH_KEYS,
   AUTH_TYPE_KEYS,
   AUTH_TYPES,
-  ERRORS,
   TIMEFRAMES_AND_REQUIRED_KEYS,
   TIMEFRAMES,
 };
