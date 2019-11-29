@@ -29,7 +29,7 @@
     "lint:fix": "eslint --fix .",
     "lint": "eslint .",
     "release": "standard-version",
-    "postrelease": "git push --follow-tags && gh-release -y && npm publish",
+    "postrelease": "git push --follow-tags && npm publish",
     "test": "jest --watchAll",
     "test:ci": "jest"
   },
